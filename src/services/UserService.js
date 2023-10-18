@@ -1,18 +1,19 @@
 import Api from '@/services/Api'
+
 export default {
     index(search) {
-        return Api().get('users')
+        return Api().get('speakers')
     },
-    show(userId) {
-        return Api().get('user/' + userId)
+    show(speakerId) {
+        return Api().get('speaker/' + speakerId)
     },
-    post(user) {
-        return Api().post('user', user)
+    post(speaker) {
+        return Api().post('speaker', speaker)
     },
-    put(user) {
-        return Api().put('user/' + user.id, user)
+    put(speaker) {
+        return Api().put('speaker/' + speaker.id, speaker)
     },
-    delete(user) {
-        return Api().delete('user/' + user.id, user)
+    delete(speaker) {
+        return Api().delete('speaker/' + speaker.id, speaker)
     },
 }

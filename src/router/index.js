@@ -5,6 +5,11 @@ import UserEdit from '@/components/Users/EditUser'
 import UserShow from '@/components/Users/ShowUser'
 import UserCreate from '@/components/Users/CreateUser'
 
+import SpeakerIndex from '../components/Speakers/Index.vue'
+import SpeakerCreate from '../components/Speakers/CreateSpeaker.vue'
+import SpeakerEdit from '../components/Speakers/EditSpeaker.vue'
+import SpeakerShow from '../components/Speakers/ShowSpeaker.vue'
+
 Vue.use(Router)
 
 export default new Router({
@@ -30,7 +35,25 @@ export default new Router({
       component: UserIndex
     },
 
-    
-
+    {
+      path: '/speakers',
+      name: 'speakers',
+      component: SpeakerIndex
+    },
+    {
+      path: '/speaker/create',
+      name: 'speaker-create',
+      component: SpeakerCreate
+    },
+    {
+      path: '/speaker/edit/:speakerId',
+      name: 'speaker-edit',
+      component: SpeakerEdit
+    },
+    {
+      path: '/speaker/show/:speakerId',
+      name: 'speaker-show',
+      component: SpeakerShow
+    },
   ]
 })
